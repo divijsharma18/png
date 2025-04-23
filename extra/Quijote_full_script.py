@@ -308,27 +308,22 @@ elif simulation == 'Kazu':
     
                 # Generate linear overdensity field at zic
                 print ('Loading initial density field... ')
-                dlin = np.load('/global/cfs/cdirs/m4031/jsull/png_eq/desn{}c.npy'.format(sim))
-                # Create the mesh (with complex=True)
-                BoxSize = [1000.0, 1000.0, 500.0]  # Example, units e.g. Mpc/h
-
-                # Create dummy catalog (required by ArrayMesh)
-                cat = CatalogSource({'Position': np.zeros((1, 3))})  # not used, just needed
-                
-                # Create the mesh
-                mesh = ArrayMesh(catalog=cat, array=dlin, BoxSize=BoxSize, Nmesh=dlin.shape, complex=True)
-                # arr = mesh.preview()
+                # dlin = np.load('/global/cfs/cdirs/m4031/jsull/png_eq/desn{}c.npy'.format(sim))
+                # # Create the mesh (with complex=True)
+                # BoxSize = [1000.0, 1000.0, 500.0]  # Example, units e.g. Mpc/h                
+                # # Create the mesh
+                # mesh = ArrayMesh(array=dlin, BoxSize=BoxSize, Nmesh=dlin.shape, complex=True)
                 if sim_type == 'Gaussian':
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/Gaussian/ICmesh'.format(sim)
                 else: 
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/PNG_EQ_1000.0/ICmesh'.format(sim)
-                arr_local = mesh.compute()  # local slice of the mesh on this rank
-                np.save(f"{snapdir}_rank{comm.rank}.npy", arr_local)
+                # mesh.save(snapdir)
+                # # arr_local = mesh.compute()
+                # # np.save(snapdir, arr_local)
+                # # print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
+                # wefew
 
-                # np.save(snapdir, arr)
-                print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
-                wefew
-    
+                dlin = BigFileMesh(snapdir, 'Field').to_field(mode='complex')
                 # Compute shifted fields
                 print ('Computing shifted fields... ')
                 d1, d2, dG2, d3 = generate_fields_new(dlin, c, zic, zout, comm=comm)
