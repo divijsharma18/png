@@ -324,8 +324,12 @@ elif simulation == 'Kazu':
                 # # np.save(snapdir, arr_local)
                 # # print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
                 # wefew
-
-                dlin = BigFileMesh(snapdir, 'Field').to_field(mode='complex')
+                print('Loading BigFileMesh', flush=True)
+                dlin = BigFileMesh(snapdir, 'Field')
+                print('Done', flush=True)
+                print('Creating particle mesh', flush=True)
+                dlin = dlin.to_field(mode='complex')
+                print('Done', flush=True)
                 # Compute shifted fields
                 print ('Computing shifted fields... ')
                 d1, d2, dG2, d3 = generate_fields_new(dlin, c, zic, zout, comm=comm)
