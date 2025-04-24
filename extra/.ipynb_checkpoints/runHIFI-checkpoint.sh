@@ -2,8 +2,10 @@
 #SBATCH --qos=debug
 #SBATCH --time=30
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=128
+#SBATCH --ntasks-per-node=2
 #SBATCH --constraint=cpu
+#SBATCH --output=slurm-.o%j
+#SBATCH --error=slurm-.e%j
 
 module load conda
 module load cudatoolkit/12.0

@@ -10,6 +10,8 @@ from nbodykit.base.catalog import CatalogSource
 import time
 from argparse import ArgumentParser
 from scipy.interpolate import interp1d
+from nbodykit import setup_logging
+setup_logging() # turn on logging to screen
 start = time.time()
 
 comm = CurrentMPIComm.get()    
