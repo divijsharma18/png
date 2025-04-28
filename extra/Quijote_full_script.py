@@ -300,6 +300,8 @@ elif simulation == 'Kazu':
     for sim_type in ['Gaussian', 'nonGaussian']:
         for Mh_bins in [np.array([10**13.0, 10**13.5])]:
             for sim in [1991, 1992]:
+                # if (sim_type == 'Gaussian' and sim == 1991):
+                #     continue
 
                 Mmin = np.log10(Mh_bins[0])
                 Mmax = np.log10(Mh_bins[1])
@@ -310,26 +312,29 @@ elif simulation == 'Kazu':
     
                 # Generate linear overdensity field at zic
                 print ('Loading initial density field... ')
-                # dlin = np.load('/global/cfs/cdirs/m4031/jsull/png_eq/desn{}c.npy'.format(sim))
-                # # Create the mesh (with complex=True)
-                # BoxSize = [1000.0, 1000.0, 500.0]  # Example, units e.g. Mpc/h                
-                # # Create the mesh
-                # mesh = ArrayMesh(array=dlin, BoxSize=BoxSize, Nmesh=dlin.shape, complex=True)
                 if sim_type == 'Gaussian':
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/Gaussian/ICmesh'.format(sim)
                 else: 
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/PNG_EQ_1000.0/ICmesh'.format(sim)
+
+                 #Code to create bigmeshfile 
+                # dlin = np.load('/global/cfs/cdirs/m4031/jsull/png_eq/desn{}c.npy'.format(sim))
+                # # Create the mesh (with complex=True)
+                # BoxSize = [1000.0, 1000.0, 500.0]                 
+                # # Create the mesh
+                # mesh = ArrayMesh(array=dlin, BoxSize=BoxSize, Nmesh=dlin.shape, complex=True)
                 # mesh.save(snapdir)
-                # # arr_local = mesh.compute()
-                # # np.save(snapdir, arr_local)
-                # # print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
                 # wefew
+                
                 print('Loading BigFileMesh', flush=True)
                 dlin = BigFileMesh(snapdir, 'Field')
+                print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
                 print('Done', flush=True)
                 print('Creating particle mesh', flush=True)
-                dlin = dlin.to_field(mode='complex')
+                # dlin = dlin.to_field(mode='complex')
+                dlin = dlin.paint(mode='complex', Nmesh=256)
                 print('Done', flush=True)
+
                 # Compute shifted fields
                 print ('Computing shifted fields... ')
                 d1, d2, dG2, d3 = generate_fields_new(dlin, c, zic, zout, comm=comm)
@@ -346,7 +351,8 @@ elif simulation == 'Kazu':
                 else: 
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/PNG_EQ_1000.0/rockstar_compressed_z0.5.dat'.format(sim)
 
-                pos_h = np.loadtxt(snapdir)
+                pos_h = np.loadtxt(snapdir, comments='#', usecols=(3, 4, 5))
+                print(pos_h.shape, flush=True)
 
                 # make a catalog with halo positions 
                 dtype = np.dtype([('Position', ('f8', 3)),])
@@ -470,7 +476,7 @@ elif simulation == 'Kazu':
                 plt.loglog(kk, perr.power['power'].real, 'C1-', label = '$P_\\mathrm{err}$ (Cubic bias)')
                 plt.loglog(kk, perr_quad.power['power'].real, 'C1--', label = '$P_{\\rm err}\ \\mathrm{(quad)}$')
                 plt.loglog(kk, perr_lin.power['power'].real, 'C1:', label = '$P_{\\rm err}\ \\mathrm{(lin)}$')
-                plt.axhline(1/nbar, ls='--', c='gray')
+                # plt.axhline(1/nbar, ls='--', c='gray')
                 plt.legend(loc=0, ncol=1, frameon=False)
                 plt.title("$z=%.1f$"%zout)
                 plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)

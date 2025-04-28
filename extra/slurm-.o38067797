@@ -1,0 +1,136 @@
+comm <mpi4py.MPI.Intracomm object at 0x7fad61402bb0> comm.rank 0 comm.size 1
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+comm <mpi4py.MPI.Intracomm object at 0x7f2927d0dc90> comm.rank 0 comm.size 1
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 288 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 293 sec.)
+(11976223, 3)
+done (elapsed time: 287 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 292 sec.)
+(11976223, 3)
+cat.mean 2.0256265997886658e-08
+Loading initial density field... 
+Loading BigFileMesh
+cat.mean 2.0256265997886658e-08
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 376 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 376 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 662 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 667 sec.)
+(11789719, 3)
+done (elapsed time: 663 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 668 sec.)
+(11789719, 3)
+cat.mean -2.7706846594810486e-08
+Loading initial density field... 
+Loading BigFileMesh
+cat.mean -2.7706846594810486e-08
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 751 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 751 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 1038 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1044 sec.)
+(11793439, 3)
+done (elapsed time: 1040 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1045 sec.)
+(11793439, 3)
+cat.mean 4.6798959374427795e-08
+cat.mean 4.6798959374427795e-08

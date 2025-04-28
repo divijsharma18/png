@@ -1,0 +1,42 @@
+comm <mpi4py.MPI.Intracomm object at 0x7f072c5dcbd0> comm.rank 0 comm.size 1
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+comm <mpi4py.MPI.Intracomm object at 0x7fbb3ed33bf0> comm.rank 0 comm.size 1
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Done
+Creating particle mesh
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done
+Readout
+Done delta_1
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 307 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 313 sec.)
+done (elapsed time: 308 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 313 sec.)

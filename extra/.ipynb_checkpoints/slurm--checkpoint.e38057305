@@ -1,0 +1,10 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000002.17 ]   0: 04-24 10:16  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000002.18 ]   0: 04-24 10:16  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+slurmstepd: error: Detected 1 oom_kill event in StepId=38057305.0. Some of the step tasks have been OOM Killed.
+srun: error: nid004301: task 0: Out Of Memory
+srun: Terminating StepId=38057305.0
+slurmstepd: error: *** STEP 38057305.0 ON nid004301 CANCELLED AT 2025-04-24T17:20:46 ***
