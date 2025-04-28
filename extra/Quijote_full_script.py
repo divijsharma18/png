@@ -68,17 +68,23 @@ output_folder = cmd_args.output_folder + '/'
 # ## General parameters ###
 # #########################
 
-zic  = 127 # Quijote initial redshift
+if simulation == 'Kazu':
+    zic = 0
+else:
+    zic  = 127 # Quijote initial redshift
+print('Zic={}'.format(zic), flush=True)
+
 kmin = 2*np.pi/BoxSize/2 # kmin used in Pk measurements [h/Mpc]
 
 print ("Generating shifted fields in real-space at output redshift z=%.1f, in a BoxSize L=%.1f on a Nmesh=%i^3 grid with IC seed %i..."\
        %(zout, BoxSize, Nmesh, seed))
 
-# Quijote cosmology:
-# c = cosmology.Cosmology(h=0.6711, Omega0_b=0.049, Omega0_cdm=0.3175 - 0.049, n_s=0.9624, m_ncdm=[]).match(sigma8=0.834)
-
 #Kazu's cosmology
-c = cosmology.Cosmology(h=0.6766, Omega0_b=0.049, Omega0_cdm=0.3175 - 0.049, n_s=0.9665, m_ncdm=[]).match(sigma8=0.834)
+if simulation == 'Kazu':
+    c = cosmology.Cosmology(h=0.6766, Omega0_cdm=0.309640, n_s=0.9665, m_ncdm=[], A_s=2.105e-9)
+else:
+    # Quijote cosmology:
+    c = cosmology.Cosmology(h=0.6711, Omega0_b=0.049, Omega0_cdm=0.3175 - 0.049, n_s=0.9624, m_ncdm=[]).match(sigma8=0.834)
 
 Plin_zout = cosmology.LinearPower(c, zout)
 Plin_z0 = cosmology.LinearPower(c, 0)
@@ -333,7 +339,31 @@ elif simulation == 'Kazu':
                 print('Creating particle mesh', flush=True)
                 # dlin = dlin.to_field(mode='complex')
                 dlin = dlin.paint(mode='complex', Nmesh=256)
+                pk_dlin = FFTPower(dlin, mode='1d', kmin=kmin)
+                plt.figure(figsize=(8,5))
+                plt.loglog(pk_dlin.power.coords['k'], pk_dlin.power['power'].real, 'k', label = '$P_{IC}$')
+                plt.legend(loc=0, ncol=1, frameon=False)
+                plt.title("$z=%.1f$"%zout)
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)
+                plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
+                plt.savefig(output_folder + 'Pk_IC_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                plt.close()
                 print('Done', flush=True)
+
+                plt.figure(figsize=(8,5))
+                plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_zout(pk_dlin.power.coords['k']), 'k', label = '$P_{IC}$/$P_{lin}$')
+                for z_test in [50, 75, 100, 125, 150, 175, 200]:
+                    c = cosmology.Cosmology(h=0.6766, Omega0_cdm=0.309640, n_s=0.9665, m_ncdm=[], A_s=2.105e-9)
+                    Plin_z_test = cosmology.LinearPower(c, z_test)
+                    plt.plot(pk_dlin.power.coords['k'], Plin_z_test(pk_dlin.power.coords['k'])/Plin_zout(pk_dlin.power.coords['k']), linestyle=':', label = '$z_{{test}}={}$'.format(z_test))
+                plt.xscale('log')
+                plt.legend(loc=0, ncol=1, frameon=False)
+                plt.title("$z=%.1f$"%zout)
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)
+                plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
+                plt.savefig(output_folder + 'Pk_fracICbyLin_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                plt.close()
+
 
                 # Compute shifted fields
                 print ('Computing shifted fields... ')
@@ -483,8 +513,8 @@ elif simulation == 'Kazu':
                 plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
                 plt.savefig(output_folder + 'Pk_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
                 plt.close()
-                
 
+                
     
 
 
