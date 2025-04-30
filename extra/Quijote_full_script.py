@@ -69,7 +69,7 @@ output_folder = cmd_args.output_folder + '/'
 # #########################
 
 if simulation == 'Kazu':
-    zic = 0
+    zic = 39
 else:
     zic  = 127 # Quijote initial redshift
 print('Zic={}'.format(zic), flush=True)
@@ -352,10 +352,10 @@ elif simulation == 'Kazu':
 
                 plt.figure(figsize=(8,5))
                 plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_zout(pk_dlin.power.coords['k']), 'k', label = '$P_{IC}$/$P_{lin}$')
-                for z_test in [50, 75, 100, 125, 150, 175, 200]:
-                    c = cosmology.Cosmology(h=0.6766, Omega0_cdm=0.309640, n_s=0.9665, m_ncdm=[], A_s=2.105e-9)
-                    Plin_z_test = cosmology.LinearPower(c, z_test)
-                    plt.plot(pk_dlin.power.coords['k'], Plin_z_test(pk_dlin.power.coords['k'])/Plin_zout(pk_dlin.power.coords['k']), linestyle=':', label = '$z_{{test}}={}$'.format(z_test))
+                # for z_test in [50, 75, 100, 125, 150, 175, 200]:
+                #     c = cosmology.Cosmology(h=0.6766, Omega0_cdm=0.309640, n_s=0.9665, m_ncdm=[], A_s=2.105e-9)
+                #     Plin_z_test = cosmology.LinearPower(c, z_test)
+                #     plt.plot(pk_dlin.power.coords['k'], Plin_z_test(pk_dlin.power.coords['k'])/Plin_zout(pk_dlin.power.coords['k']), linestyle=':', label = '$z_{{test}}={}$'.format(z_test))
                 plt.xscale('log')
                 plt.legend(loc=0, ncol=1, frameon=False)
                 plt.title("$z=%.1f$"%zout)

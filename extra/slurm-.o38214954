@@ -1,0 +1,60 @@
+comm <mpi4py.MPI.Intracomm object at 0x7fe2d4198c70> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7f892dc82cd0> comm.rank 0 comm.size 1
+Zic=39
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Creating catalog
+Done
+Readout
+Done delta_G2
+Done
+Done delta_1
+Done delta_3
+Done delta_G2
+Done delta_3
+done (elapsed time: 304 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 309 sec.)
+(11968368, 3)
+done (elapsed time: 311 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 316 sec.)
+(11968368, 3)
+cat.mean 9.66247171163559e-09
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 421 sec.)
+Done
+Creating particle mesh
+cat.mean 9.66247171163559e-09
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 426 sec.)
+Done
+Creating particle mesh

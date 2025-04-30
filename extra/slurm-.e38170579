@@ -1,0 +1,8 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000001.86 ]   0: 04-28 14:28  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000001.86 ]   0: 04-28 14:28  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+slurmstepd: error: *** STEP 38170579.0 ON nid005350 CANCELLED AT 2025-04-28T21:30:23 ***
+slurmstepd: error: *** JOB 38170579 ON nid005350 CANCELLED AT 2025-04-28T21:30:23 ***
