@@ -1,0 +1,52 @@
+comm <mpi4py.MPI.Intracomm object at 0x7f5896353cf0> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7efc831b9c10> comm.rank 0 comm.size 1
+Zic=39
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=32^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=32^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+Computing shifted fields... 
+Creating copy
+[32 32 32]
+Done
+[32 32 32]
+Creating catalog
+Done
+Creating catalog
+Done
+Readout
+Readout
+Done
+Done
+Done delta_1
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 240 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 240 sec.)
+(11968368, 3)
+done (elapsed time: 240 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 240 sec.)
+(11968368, 3)
+cat.mean 1.792795956134796e-08
+Nh = 284262.00, 1/nbar = 3517.88
+cat.mean 1.792795956134796e-08
+Nh = 284262.00, 1/nbar = 3517.88

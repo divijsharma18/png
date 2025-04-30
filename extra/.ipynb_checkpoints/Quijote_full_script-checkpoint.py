@@ -28,7 +28,7 @@ ap.add_argument('--seed',
                 
 ap.add_argument('--nmesh',
                 type=int,
-                default=256,
+                default=64,
                 help="Number of grid cells per side (default 256)")
                 
 ap.add_argument('--boxsize',
@@ -338,8 +338,9 @@ elif simulation == 'Kazu':
                 print('Done', flush=True)
                 print('Creating particle mesh', flush=True)
                 # dlin = dlin.to_field(mode='complex')
-                dlin = dlin.paint(mode='complex', Nmesh=256)
-                pk_dlin = FFTPower(dlin, mode='1d', kmin=kmin)
+                dlin = dlin.paint(mode='complex', Nmesh=Nmesh)
+                # dlin /= Dic
+                pk_dlin = FFTPower(dlin/Dic, mode='1d', kmin=kmin)
                 plt.figure(figsize=(8,5))
                 plt.loglog(pk_dlin.power.coords['k'], pk_dlin.power['power'].real, 'k', label = '$P_{IC}$')
                 plt.legend(loc=0, ncol=1, frameon=False)
@@ -351,14 +352,15 @@ elif simulation == 'Kazu':
                 print('Done', flush=True)
 
                 plt.figure(figsize=(8,5))
-                plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_zout(pk_dlin.power.coords['k']), 'k', label = '$P_{IC}$/$P_{lin}$')
+                plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_zout(pk_dlin.power.coords['k']), 'k', label = '$P_{IC}$/$P_{lin}(z=0.5)$')
+                plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_z0(pk_dlin.power.coords['k']), 'k:', label = '$P_{IC}$/$P_{lin}(z=0)$')
                 # for z_test in [50, 75, 100, 125, 150, 175, 200]:
                 #     c = cosmology.Cosmology(h=0.6766, Omega0_cdm=0.309640, n_s=0.9665, m_ncdm=[], A_s=2.105e-9)
                 #     Plin_z_test = cosmology.LinearPower(c, z_test)
                 #     plt.plot(pk_dlin.power.coords['k'], Plin_z_test(pk_dlin.power.coords['k'])/Plin_zout(pk_dlin.power.coords['k']), linestyle=':', label = '$z_{{test}}={}$'.format(z_test))
                 plt.xscale('log')
                 plt.legend(loc=0, ncol=1, frameon=False)
-                plt.title("$z=%.1f$"%zout)
+                # plt.title("$z=%.1f$"%zout)
                 plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)
                 plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
                 plt.savefig(output_folder + 'Pk_fracICbyLin_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
@@ -370,7 +372,45 @@ elif simulation == 'Kazu':
                 d1, d2, dG2, d3 = generate_fields_new(dlin, c, zic, zout, comm=comm)
                 p1 = FFTPower(d1, mode='1d', kmin=kmin)
                 print ('done (elapsed time: %1.f sec.)'%(time.time()-start))
-    
+                
+                plt.figure(figsize=(8,5))
+                p1 = FFTPower(d1, mode='1d', kmin=kmin)
+                plt.plot(p1.power.coords['k'], p1.power['power'].real, label='|d1|²')
+                plt.plot(p1.power.coords['k'], Plin_zout(p1.power.coords['k']), label='P_lin(zout)')
+                plt.xscale('log')
+                plt.legend(loc=0, ncol=1, frameon=False)
+                # plt.title("$z=%.1f$"%zout)
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)
+                plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
+                plt.savefig(output_folder + 'testing_d1.pdf', bbox_inches='tight')
+                plt.close()
+
+                # Compute auto and cross spectra between bias operators
+                p11 = FFTPower(d1, mode='1d', kmin=kmin)
+                p21 = FFTPower(d2, mode='1d', second=d1, kmin=kmin)
+                pG21 = FFTPower(dG2, mode='1d', second=d1, kmin=kmin)
+                p31 = FFTPower(d3, mode='1d', second=d1, kmin=kmin)
+                kk = p11.power.coords['k']
+                P11 = p11.power['power'].real
+                P21 = p21.power['power'].real
+                PG21 = pG21.power['power'].real
+                P31 = p31.power['power'].real
+
+                plt.figure(figsize=(8, 5))
+                plt.plot(kk, P11, label='$P_{d_1, d_1}$')
+                plt.plot(kk, np.abs(P21), label='$|P_{d_2, d_1}|$')
+                plt.plot(kk, np.abs(PG21), label='$|P_{G_2, d_1}|$')
+                plt.plot(kk, np.abs(P31), label='$|P_{d_3, d_1}|$')
+                plt.plot(kk, Plin_zout(kk), 'k--', label='$P_{\\rm lin}$')
+                plt.legend(loc='best')
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$")
+                plt.ylabel("$P(k)\,[h^{-3}\,\\mathrm{Mpc}^3]$")
+                plt.title("Cross spectra between bias operators and $d_1$")
+                plt.tight_layout()
+                plt.savefig(output_folder + "bias_cross_spectra_z=%.1f_sim_%i.pdf" % (zout, sim))
+                plt.close()
+
+                    
                 # Orthogonalize shifted fields
                 print ('Orthogonalizing shifted fields... ')
                 d2, dG2, d3 = orthogonalize(d1, d2, dG2, d3)
@@ -382,15 +422,20 @@ elif simulation == 'Kazu':
                     snapdir = '/global/cfs/projectdirs/m4031/divijsharma/PNG/{}/PNG_EQ_1000.0/rockstar_compressed_z0.5.dat'.format(sim)
 
                 pos_h = np.loadtxt(snapdir, comments='#', usecols=(3, 4, 5))
+                masses = np.loadtxt(snapdir, comments='#', usecols=2)
+                pid = np.loadtxt(snapdir, comments='#', usecols=9)
                 print(pos_h.shape, flush=True)
-
+                valid = (masses > Mh_bins[0]) & (masses < Mh_bins[1]) & (pid == -1)
+                nbar = valid[valid].size/BoxSize**3    
+    
                 # make a catalog with halo positions 
                 dtype = np.dtype([('Position', ('f8', 3)),])
-                cat = np.empty((pos_h.shape[0],), dtype=dtype)
-                cat['Position'] = pos_h
+                cat = np.empty((pos_h[valid].shape[0],), dtype=dtype)
+                cat['Position'] = pos_h[valid]
                 cat = ArrayCatalog(cat, BoxSize=BoxSize * np.ones(3), Nmesh=Nmesh)
                 cat = cat.to_mesh(compensated=True).paint() - 1.0
                 print('cat.mean', cat.cmean())
+                print('Nh = %.2f, 1/nbar = %.2f'%(valid[valid].size, 1/nbar))
     
                 delta_h = ArrayMesh(cat, BoxSize)
     
@@ -506,13 +551,15 @@ elif simulation == 'Kazu':
                 plt.loglog(kk, perr.power['power'].real, 'C1-', label = '$P_\\mathrm{err}$ (Cubic bias)')
                 plt.loglog(kk, perr_quad.power['power'].real, 'C1--', label = '$P_{\\rm err}\ \\mathrm{(quad)}$')
                 plt.loglog(kk, perr_lin.power['power'].real, 'C1:', label = '$P_{\\rm err}\ \\mathrm{(lin)}$')
-                # plt.axhline(1/nbar, ls='--', c='gray')
+                plt.axhline(1/nbar, ls='--', c='gray')
                 plt.legend(loc=0, ncol=1, frameon=False)
                 plt.title("$z=%.1f$"%zout)
                 plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$", fontsize=12)
                 plt.ylabel("$P\,[h^{-3}\mathrm{Mpc}^3]$")
                 plt.savefig(output_folder + 'Pk_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
                 plt.close()
+
+                wefew
 
                 
     

@@ -1,0 +1,92 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000001.74 ]   0: 04-30 09:26  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000001.74 ]   0: 04-30 09:26  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000245.06 ]   0: 04-30 09:30  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000245.06 ]   0: 04-30 09:30  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000245.15 ]   0: 04-30 09:30  MeshSource      INFO     field: FieldMesh() painting done
+[ 000251.81 ]   0: 04-30 09:30  MeshSource      INFO     field: FieldMesh() painting done
+[ 000252.43 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000253.11 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000253.79 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000254.46 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000255.14 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000255.82 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8abb670> painting done
+[ 000257.83 ]   0: 04-30 09:30  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f0fc8a2d790> painting done
+[ 000265.32 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000266.90 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000266.90 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000268.01 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000268.01 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000269.15 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000269.15 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000270.27 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000270.28 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000270.28 ]   0: 04-30 09:31  CatalogMesh     INFO     mean particles per cell is 1
+[ 000270.28 ]   0: 04-30 09:31  CatalogMesh     INFO     sum is 0 
+[ 000270.29 ]   0: 04-30 09:31  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000270.57 ]   0: 04-30 09:31  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000271.19 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000272.33 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000272.33 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000273.44 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000273.44 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000273.83 ]   0: 04-30 09:31  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000273.83 ]   0: 04-30 09:31  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000274.00 ]   0: 04-30 09:31  MeshSource      INFO     field: FieldMesh() painting done
+[ 000274.56 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000274.56 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000275.70 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000275.71 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000275.71 ]   0: 04-30 09:31  CatalogMesh     INFO     mean particles per cell is 1
+[ 000275.71 ]   0: 04-30 09:31  CatalogMesh     INFO     sum is -0.00341797 
+[ 000275.72 ]   0: 04-30 09:31  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000276.00 ]   0: 04-30 09:31  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000276.62 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000277.74 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000277.74 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000278.90 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000278.90 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000279.96 ]   0: 04-30 09:31  MeshSource      INFO     field: FieldMesh() painting done
+[ 000280.05 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000280.05 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000280.58 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f648255f940> painting done
+[ 000281.21 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000281.21 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000281.21 ]   0: 04-30 09:31  CatalogMesh     INFO     mean particles per cell is 1
+[ 000281.21 ]   0: 04-30 09:31  CatalogMesh     INFO     sum is -0.000732422 
+[ 000281.22 ]   0: 04-30 09:31  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000281.26 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f648255f940> painting done
+[ 000281.50 ]   0: 04-30 09:31  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000281.96 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f648255f940> painting done
+[ 000282.14 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000282.62 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f6482583f70> painting done
+[ 000283.28 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000283.28 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000283.31 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f6482583f70> painting done
+[ 000283.96 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f648255f940> painting done
+[ 000284.41 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000284.41 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000285.55 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000285.55 ]   0: 04-30 09:31  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000285.92 ]   0: 04-30 09:31  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f6482522ee0> painting done
+[ 000286.69 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000286.70 ]   0: 04-30 09:31  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000286.70 ]   0: 04-30 09:31  CatalogMesh     INFO     mean particles per cell is 1
+[ 000286.70 ]   0: 04-30 09:31  CatalogMesh     INFO     sum is -55095.8 
+[ 000286.70 ]   0: 04-30 09:31  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000286.99 ]   0: 04-30 09:31  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000287.11 ]   0: 04-30 09:31  MeshSource      INFO     field: FieldMesh() painting done
+[ 000287.54 ]   0: 04-30 09:31  MeshSource      INFO     field: FieldMesh() painting done
+[ 000288.04 ]   0: 04-30 09:31  MeshSource      INFO     field: FieldMesh() painting done
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 406, in <module>
+    wefew
+NameError: name 'wefew' is not defined
+srun: error: nid004482: task 1: Exited with exit code 1
+srun: Terminating StepId=38221841.0
+slurmstepd: error: *** STEP 38221841.0 ON nid004482 CANCELLED AT 2025-04-30T16:31:24 ***
+srun: error: nid004482: task 0: Terminated
+srun: Force Terminated StepId=38221841.0
