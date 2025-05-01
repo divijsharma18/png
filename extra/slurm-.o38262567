@@ -96,3 +96,111 @@ Done delta_G2
 Done delta_G2
 Done delta_3
 Done delta_3
+done (elapsed time: 749 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 757 sec.)
+(11976223, 3)
+Min position (x, y, z): [4.0e-05 2.5e-04 1.5e-04]
+Max position (x, y, z): [999.99994 999.99994 999.99988]
+done (elapsed time: 750 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 758 sec.)
+(11976223, 3)
+Min position (x, y, z): [4.0e-05 2.5e-04 1.5e-04]
+Max position (x, y, z): [999.99994 999.99994 999.99988]
+cat.mean -2.3748725652694702e-08
+Nh = 269844.00, 1/nbar = 3705.84
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 915 sec.)
+Done
+Creating particle mesh
+cat.mean -2.3748725652694702e-08
+Nh = 269844.00, 1/nbar = 3705.84
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 916 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Done
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Readout
+Done
+Done delta_1
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 1203 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1211 sec.)
+(11789719, 3)
+done (elapsed time: 1203 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1211 sec.)
+(11789719, 3)
+Min position (x, y, z): [0.00019 0.00031 0.00011]
+Min position (x, y, z): [0.00019 0.00031 0.00011]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -3.521563485264778e-08
+Nh = 272101.00, 1/nbar = 3675.11
+Loading initial density field... 
+Loading BigFileMesh
+cat.mean -3.521563485264778e-08
+Nh = 272101.00, 1/nbar = 3675.11
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 1386 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 1386 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3

@@ -1,0 +1,60 @@
+comm <mpi4py.MPI.Intracomm object at 0x7fbedff30d30> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7f1a891c7d90> comm.rank 0 comm.size 1
+Zic=39
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Readout
+Done
+Done delta_1
+Done
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 317 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 325 sec.)
+(11793439, 3)
+Min position (x, y, z): [7.0e-05 1.2e-04 9.0e-05]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+done (elapsed time: 318 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 326 sec.)
+(11793439, 3)
+Min position (x, y, z): [7.0e-05 1.2e-04 9.0e-05]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -1.862645149230957e-08
+Nh = 271759.00, 1/nbar = 3679.73
+cat.mean -1.862645149230957e-08
+Nh = 271759.00, 1/nbar = 3679.73

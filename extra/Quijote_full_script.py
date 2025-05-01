@@ -306,8 +306,8 @@ elif simulation == 'Kazu':
     for sim_type in ['Gaussian', 'nonGaussian']:
         for Mh_bins in [np.array([10**13.0, 10**13.5])]:
             for sim in [1991, 1992]:
-                # if (sim_type == 'Gaussian' and sim == 1991):
-                #     continue
+                if (sim_type == 'Gaussian' or sim == 1991):
+                    continue
 
                 Mmin = np.log10(Mh_bins[0])
                 Mmax = np.log10(Mh_bins[1])
