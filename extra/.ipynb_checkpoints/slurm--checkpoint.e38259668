@@ -1,0 +1,22 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000001.82 ]   0: 05-01 09:31  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000001.82 ]   0: 05-01 09:31  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000244.30 ]   0: 05-01 09:35  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [64 64 64] done
+[ 000244.30 ]   0: 05-01 09:35  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000244.30 ]   0: 05-01 09:35  MeshSource      INFO     field: FieldMesh() painting done
+[ 000245.35 ]   0: 05-01 09:35  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f61a8756640> painting done
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 359, in <module>
+    cax = plt.imshow(ArrayMesh(dlin, BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+NameError: name 'nslice' is not defined
+srun: error: nid004359: task 0: Exited with exit code 1
+srun: Terminating StepId=38259668.0
+[ 000245.73 ]   0: 05-01 09:35  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [64 64 64] done
+[ 000245.73 ]   0: 05-01 09:35  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000245.73 ]   0: 05-01 09:35  MeshSource      INFO     field: FieldMesh() painting done
+slurmstepd: error: *** STEP 38259668.0 ON nid004359 CANCELLED AT 2025-05-01T16:35:27 ***
+srun: error: nid004359: task 1: Terminated
+srun: Force Terminated StepId=38259668.0

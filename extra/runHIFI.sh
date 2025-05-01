@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --qos=debug
-#SBATCH --time=30
+#SBATCH --time=20
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --constraint=cpu

@@ -427,6 +427,9 @@ elif simulation == 'Kazu':
                 print(pos_h.shape, flush=True)
                 valid = (masses > Mh_bins[0]) & (masses < Mh_bins[1]) & (pid == -1)
                 nbar = valid[valid].size/BoxSize**3    
+
+                print("Min position (x, y, z):", np.min(pos_h, axis=0), flush=True)
+                print("Max position (x, y, z):", np.max(pos_h, axis=0), flush=True)
     
                 # make a catalog with halo positions 
                 dtype = np.dtype([('Position', ('f8', 3)),])
@@ -438,12 +441,97 @@ elif simulation == 'Kazu':
                 print('Nh = %.2f, 1/nbar = %.2f'%(valid[valid].size, 1/nbar))
     
                 delta_h = ArrayMesh(cat, BoxSize)
+
+                # Get halo power and linear power
+                ph_fin = FFTPower(delta_h, mode='1d', kmin=kmin)
+                kk = ph_fin.power.coords['k']
+                P_h = ph_fin.power['power'].real
+                P_lin = Plin_zout(kk)
+
+                def model(k, b1, Pshot):
+                    return b1**2 * Plin_zout(k) + Pshot
+
+                from scipy.optimize import curve_fit
+
+                # Fit over a reasonable k range (linear/quasi-linear)
+                mask = (kk > 0.02) & (kk < 0.3)  # You can adjust this as needed
+                
+                popt, pcov = curve_fit(model, kk[mask], P_h[mask], p0=[1.0, 1000.0])
+                b1_fit, Pshot_fit = popt
+
+                plt.figure(figsize=(8,5))
+                plt.plot(kk, P_h, label='Halo $P_h$')
+                plt.plot(kk, model(kk, *popt), '--', label='Fit: $b_1^2 P_{\\rm lin} + P_{\\rm shot}$')
+                plt.plot(kk, Plin_zout(kk), ':', label='$P_{\\rm lin}$')
+                plt.axhline(Pshot_fit, ls='--', color='gray', label=f'$P_{{\\rm shot}} \\approx {Pshot_fit:.1f}$')
+                plt.xscale('log')
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$")
+                plt.ylabel("$P(k)\,[h^{-3}\,\\mathrm{Mpc}^3]$")
+                plt.legend()
+                plt.title(f"Best-fit $b_1$ = {np.sqrt(b1_fit):.3f}")
+                plt.tight_layout()
+                plt.savefig(output_folder + "halo_pk_fit_linearbias_z=%.1f_sim_%i.pdf" % (zout, sim))
+                plt.close()
+
+
+                #Debugging - Plot 2D images:
+                # Parameters
+                nslice = 25  # number of mesh slices to average over
+                plt.figure(figsize=(18, 5))
+                imshow_kw = dict(interpolation='none', cmap='RdBu_r', vmin=-1, vmax=10, extent=(0,BoxSize,0,BoxSize), origin='lower')
+                
+                # Plot IC field
+                plt.subplot(1, 3, 1)
+                # cax = plt.imshow(dlin_proj.T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(dlin, BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ (IC field)')
+                plt.title('Initial Conditions Field (z_ic)')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                
+                # Plot d1
+                plt.subplot(1, 3, 2)
+                # cax = plt.imshow(d1_proj.T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(d1, BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ₁ (Zeldovich)')
+                plt.title('Zeldovich Displacement Field (d₁)')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                
+                # Plot halo field
+                plt.subplot(1, 3, 3)
+                # cax = plt.imshow(halo_proj.T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(delta_h.to_field(mode='complex'), BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ_h')
+                plt.title('Halo Overdensity Field')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                
+                plt.tight_layout()
+                plt.savefig(output_folder + "IC_d1_halo_field_projections_z=%.1f_sim_%i.pdf" % (zout, sim))
+                plt.close()
+
+
     
                 # Compute various Pk and cross-Pk
                 ph_fin  = FFTPower(delta_h, mode='1d', kmin=kmin)
                 kk = p1.power.coords['k']
     
                 ph_d1ort  = FFTPower(delta_h, mode='1d', second=d1, kmin=kmin)
+                # print(ph_d1ort, flush=True)
+                # print(ph_d1ort.shape, flush=True)
+
+                plt.figure(figsize=(8,5))
+                plt.plot(kk, ph_d1ort.power['power'].real, label='ph_d1ort')
+                plt.plot(kk, b1_fit*Plin_zout(kk), label='$b_1 P_{\\rm lin}$')
+                plt.xscale('log')
+                plt.xlabel("$k\,[h\,\mathrm{Mpc}^{-1}]$")
+                plt.ylabel("$P(k)\,[h^{-3}\,\\mathrm{Mpc}^3]$")
+                plt.legend()
+                plt.tight_layout()
+                plt.savefig(output_folder + "ph_d1ort.pdf")
+                plt.close()
+                
                 ph_d2ort  = FFTPower(delta_h, mode='1d', second=d2, kmin=kmin)
                 ph_dG2ort = FFTPower(delta_h, mode='1d', second=dG2, kmin=kmin)
                 ph_d3ort  = FFTPower(delta_h, mode='1d', second=d3, kmin=kmin)
