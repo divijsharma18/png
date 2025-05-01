@@ -1,0 +1,275 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000001.78 ]   0: 05-01 10:39  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000001.80 ]   0: 05-01 10:39  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000251.74 ]   0: 05-01 10:43  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000251.74 ]   0: 05-01 10:43  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000251.81 ]   0: 05-01 10:43  MeshSource      INFO     field: FieldMesh() painting done
+[ 000253.14 ]   0: 05-01 10:43  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000253.14 ]   0: 05-01 10:43  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000253.20 ]   0: 05-01 10:43  MeshSource      INFO     field: FieldMesh() painting done
+[ 000258.52 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000259.13 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e0d370> painting done
+[ 000259.17 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000259.78 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce49f34c0> painting done
+[ 000259.78 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e0d370> painting done
+[ 000260.43 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce49f34c0> painting done
+[ 000260.44 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e0d370> painting done
+[ 000261.08 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce49f34c0> painting done
+[ 000261.09 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e8db80> painting done
+[ 000261.73 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce4b6e910> painting done
+[ 000261.74 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e8db80> painting done
+[ 000262.39 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce4b6e910> painting done
+[ 000262.39 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e0d370> painting done
+[ 000263.04 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce49f34c0> painting done
+[ 000264.31 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9e0d5e0> painting done
+[ 000264.94 ]   0: 05-01 10:44  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce4a8f7f0> painting done
+[ 000271.36 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000272.16 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000273.03 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000273.03 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000273.62 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000273.62 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000274.14 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000274.14 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000274.73 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000274.73 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000275.25 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000275.25 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000275.85 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000275.85 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000276.37 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000276.38 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000276.38 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000276.38 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is 0 
+[ 000276.39 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000276.67 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000276.97 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000276.97 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000276.98 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000276.98 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is 0 
+[ 000276.98 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000277.26 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000277.26 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000277.86 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000278.37 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000278.37 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000278.98 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000278.98 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000279.49 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000279.49 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000280.10 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000280.10 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000280.62 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000280.62 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000281.22 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000281.22 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000281.73 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000281.73 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000281.73 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000281.73 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -0.00341797 
+[ 000281.74 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000282.02 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000282.34 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000282.35 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000282.35 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000282.35 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -0.00341797 
+[ 000282.36 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000282.61 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000282.63 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000283.23 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000283.73 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000283.73 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000284.37 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000284.37 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000284.84 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000284.84 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000285.49 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000285.49 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000285.96 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000285.96 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000286.61 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000286.61 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000287.07 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000287.08 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000287.08 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000287.08 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -0.000732422 
+[ 000287.09 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000287.37 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000287.73 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000287.74 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000287.74 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000287.74 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -0.000732422 
+[ 000287.75 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000287.96 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000288.03 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000288.62 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 16777216 
+[ 000289.08 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000289.08 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000289.75 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 4194304 out of 16777216 objects to mesh
+[ 000289.75 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 4194304 ~ 8388608 / 16777216 
+[ 000290.20 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000290.20 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000290.87 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 8388608 out of 16777216 objects to mesh
+[ 000290.87 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 8388608 ~ 12582912 / 16777216 
+[ 000291.32 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000291.32 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000292.00 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 12582912 out of 16777216 objects to mesh
+[ 000292.00 ]   0: 05-01 10:44  CatalogMesh     INFO     Chunk 12582912 ~ 16777216 / 16777216 
+[ 000292.43 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000292.43 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000292.43 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000292.43 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -55095.8 
+[ 000292.44 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000292.72 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000292.84 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000293.12 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000293.13 ]   0: 05-01 10:44  CatalogMesh     INFO     painted 16777216 out of 16777216 objects to mesh
+[ 000293.13 ]   0: 05-01 10:44  CatalogMesh     INFO     mean particles per cell is 1
+[ 000293.13 ]   0: 05-01 10:44  CatalogMesh     INFO     sum is -55095.8 
+[ 000293.14 ]   0: 05-01 10:44  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000293.27 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000293.42 ]   0: 05-01 10:44  CatalogMesh     INFO     field: (ArrayCatalog(size=16777216) as CatalogMesh) painting done
+[ 000293.53 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000293.96 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.07 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.49 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.50 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.64 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.92 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000294.92 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.07 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.08 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.34 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.35 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.50 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.51 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.93 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000295.94 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000296.00 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000296.42 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000296.58 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000296.84 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.01 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.26 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.43 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.68 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.68 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000297.85 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.10 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.11 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.27 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.28 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.53 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.54 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.71 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.71 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.96 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000298.97 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.14 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.14 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.39 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.40 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.57 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.57 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.82 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000299.83 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000300.00 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000300.00 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000300.43 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000300.44 ]   0: 05-01 10:44  MeshSource      INFO     field: FieldMesh() painting done
+[ 000462.91 ]   0: 05-01 10:47  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 269387 
+[ 000463.10 ]   0: 05-01 10:47  CatalogMesh     INFO     painted 269387 out of 269387 objects to mesh
+[ 000463.10 ]   0: 05-01 10:47  CatalogMesh     INFO     painted 269387 out of 269387 objects to mesh
+[ 000463.10 ]   0: 05-01 10:47  CatalogMesh     INFO     mean particles per cell is 0.0160567
+[ 000463.10 ]   0: 05-01 10:47  CatalogMesh     INFO     sum is 269387 
+[ 000463.11 ]   0: 05-01 10:47  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000463.15 ]   0: 05-01 10:47  CatalogMesh     INFO     Chunk 0 ~ 4194304 / 269387 
+[ 000463.30 ]   0: 05-01 10:47  CatalogMesh     INFO     painted 269387 out of 269387 objects to mesh
+[ 000463.30 ]   0: 05-01 10:47  CatalogMesh     INFO     painted 269387 out of 269387 objects to mesh
+[ 000463.30 ]   0: 05-01 10:47  CatalogMesh     INFO     mean particles per cell is 0.0160567
+[ 000463.30 ]   0: 05-01 10:47  CatalogMesh     INFO     sum is 269387 
+[ 000463.31 ]   0: 05-01 10:47  CatalogMesh     INFO     normalized the convention to 1 + delta
+[ 000463.40 ]   0: 05-01 10:47  CatalogMesh     INFO     field: (ArrayCatalog(size=269387) as CatalogMesh) painting done
+[ 000463.59 ]   0: 05-01 10:47  CatalogMesh     INFO     field: (ArrayCatalog(size=269387) as CatalogMesh) painting done
+[ 000463.80 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000463.99 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000465.12 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000465.31 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000465.70 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000465.88 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000466.38 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000466.57 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000466.99 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000467.12 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000467.52 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000467.53 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000467.64 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000467.65 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000468.29 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000468.31 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000468.42 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000468.43 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000468.83 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000468.85 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000468.95 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000468.96 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000469.38 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000469.39 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000469.49 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000469.50 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000469.82 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000469.92 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000470.24 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000470.34 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000470.67 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000470.76 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000471.09 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000471.19 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000473.02 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9880790> painting done
+[ 000473.12 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce44f1670> painting done
+[ 000474.02 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b981f2e0> painting done
+[ 000474.12 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce43dcb80> painting done
+[ 000475.02 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f12b9792610> painting done
+[ 000475.12 ]   0: 05-01 10:47  MeshSource      INFO     field: <nbodykit.base.mesh.MeshSource object at 0x7f2ce4351e50> painting done
+[ 000486.54 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000486.55 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000487.07 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000487.08 ]   0: 05-01 10:47  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000487.08 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000487.08 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000487.50 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000487.51 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000492.69 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000492.77 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000493.12 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000493.19 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000493.54 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000493.61 ]   0: 05-01 10:47  MeshSource      INFO     field: FieldMesh() painting done
+[ 000494.06 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.07 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.13 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.13 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.20 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.20 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.25 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.25 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.27 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.27 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.31 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+[ 000494.32 ]   0: 05-01 10:47  matplotlib.mathtext INFO     Substituting symbol G from STIXNonUnicode
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 648, in <module>
+    wefew
+NameError: name 'wefew' is not defined
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 648, in <module>
+    wefew
+NameError: name 'wefew' is not defined
+srun: error: nid006607: task 1: Exited with exit code 1
+srun: Terminating StepId=38260741.0
+slurmstepd: error: *** STEP 38260741.0 ON nid006607 CANCELLED AT 2025-05-01T17:47:58 ***
+srun: error: nid006607: task 0: Terminated
+srun: Force Terminated StepId=38260741.0

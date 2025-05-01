@@ -28,7 +28,7 @@ ap.add_argument('--seed',
                 
 ap.add_argument('--nmesh',
                 type=int,
-                default=64,
+                default=256,
                 help="Number of grid cells per side (default 256)")
                 
 ap.add_argument('--boxsize',
@@ -326,10 +326,11 @@ elif simulation == 'Kazu':
                  #Code to create bigmeshfile 
                 # dlin = np.load('/global/cfs/cdirs/m4031/jsull/png_eq/desn{}c.npy'.format(sim))
                 # # Create the mesh (with complex=True)
-                # BoxSize = [1000.0, 1000.0, 500.0]                 
+                # BoxSize = [1000.0, 1000.0, 1000.0]                 
                 # # Create the mesh
                 # mesh = ArrayMesh(array=dlin, BoxSize=BoxSize, Nmesh=dlin.shape, complex=True)
                 # mesh.save(snapdir)
+                # continue
                 # wefew
                 
                 print('Loading BigFileMesh', flush=True)
@@ -350,6 +351,19 @@ elif simulation == 'Kazu':
                 plt.savefig(output_folder + 'Pk_IC_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
                 plt.close()
                 print('Done', flush=True)
+
+                # nslice = 25  # number of mesh slices to average over
+                # plt.figure(figsize=(18, 5))
+                # imshow_kw = dict(interpolation='none', cmap='RdBu_r', vmin=np.min(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), vmax=np.max(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), extent=(0,BoxSize,0,BoxSize), origin='lower')                
+                # # Plot IC field
+                # # cax = plt.imshow(dlin_proj.T, **imshow_kw)
+                # cax = plt.imshow(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                # plt.colorbar(cax, label='δ (IC field)')
+                # plt.title('Initial Conditions Field (z_ic)')
+                # plt.xlabel('y [$h^{-1}$ Mpc]')
+                # plt.ylabel('z [$h^{-1}$ Mpc]')
+                # plt.savefig(output_folder + 'projection_IC_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                # plt.close()
 
                 plt.figure(figsize=(8,5))
                 plt.plot(pk_dlin.power.coords['k'], pk_dlin.power['power'].real / Plin_zout(pk_dlin.power.coords['k']), 'k', label = '$P_{IC}$/$P_{lin}(z=0.5)$')
@@ -483,7 +497,7 @@ elif simulation == 'Kazu':
                 # Plot IC field
                 plt.subplot(1, 3, 1)
                 # cax = plt.imshow(dlin_proj.T, **imshow_kw)
-                cax = plt.imshow(ArrayMesh(dlin, BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
                 plt.colorbar(cax, label='δ (IC field)')
                 plt.title('Initial Conditions Field (z_ic)')
                 plt.xlabel('y [$h^{-1}$ Mpc]')
@@ -492,7 +506,7 @@ elif simulation == 'Kazu':
                 # Plot d1
                 plt.subplot(1, 3, 2)
                 # cax = plt.imshow(d1_proj.T, **imshow_kw)
-                cax = plt.imshow(ArrayMesh(d1, BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(d1, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
                 plt.colorbar(cax, label='δ₁ (Zeldovich)')
                 plt.title('Zeldovich Displacement Field (d₁)')
                 plt.xlabel('y [$h^{-1}$ Mpc]')
@@ -501,7 +515,7 @@ elif simulation == 'Kazu':
                 # Plot halo field
                 plt.subplot(1, 3, 3)
                 # cax = plt.imshow(halo_proj.T, **imshow_kw)
-                cax = plt.imshow(ArrayMesh(delta_h.to_field(mode='complex'), BoxSize).apply(Gaussian(1)).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                cax = plt.imshow(ArrayMesh(delta_h.to_field(mode='complex'), BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
                 plt.colorbar(cax, label='δ_h')
                 plt.title('Halo Overdensity Field')
                 plt.xlabel('y [$h^{-1}$ Mpc]')
@@ -511,7 +525,23 @@ elif simulation == 'Kazu':
                 plt.savefig(output_folder + "IC_d1_halo_field_projections_z=%.1f_sim_%i.pdf" % (zout, sim))
                 plt.close()
 
+                plt.figure(figsize=(18, 5))
+                imshow_kw = dict(interpolation='none', cmap='RdBu_r', vmin=np.min(ArrayMesh(d1, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), vmax=np.max(ArrayMesh(d1, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), extent=(0,BoxSize,0,BoxSize), origin='lower')                
+                cax = plt.imshow(ArrayMesh(d1, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ (d1 field)')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                plt.savefig(output_folder + 'projection_d1_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                plt.close()
 
+                plt.figure(figsize=(18, 5))
+                imshow_kw = dict(interpolation='none', cmap='RdBu_r', vmin=np.min(ArrayMesh(d2, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), vmax=np.max(ArrayMesh(d2, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), extent=(0,BoxSize,0,BoxSize), origin='lower')                
+                cax = plt.imshow(ArrayMesh(d2, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ (d2 field)')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                plt.savefig(output_folder + 'projection_d2_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                plt.close()
     
                 # Compute various Pk and cross-Pk
                 ph_fin  = FFTPower(delta_h, mode='1d', kmin=kmin)
@@ -598,6 +628,17 @@ elif simulation == 'Kazu':
                 plt.ylabel("$z\,[h^{-1}\,\\mathrm{Mpc}]$")
                 plt.savefig(output_folder + 'truth_bestfitcubic_diff_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
                 plt.close()
+
+                plt.figure(figsize=(18, 5))
+                imshow_kw = dict(interpolation='none', cmap='RdBu_r', vmin=np.min(ArrayMesh(final_field, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), vmax=np.max(ArrayMesh(final_field, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0)), extent=(0,BoxSize,0,BoxSize), origin='lower')                
+                cax = plt.imshow(ArrayMesh(final_field, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0).T, **imshow_kw)
+                plt.colorbar(cax, label='δ (Final field)')
+                plt.title('$\\delta_\\mathrm{h}^\\mathrm{best-fit}$')
+                plt.xlabel('y [$h^{-1}$ Mpc]')
+                plt.ylabel('z [$h^{-1}$ Mpc]')
+                plt.savefig(output_folder + 'projection_finalField_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
+                plt.close()
+                
     
                 # compute Pk of the residual
                 perr = FFTPower(diff, mode='1d', kmin=kmin)
@@ -647,7 +688,7 @@ elif simulation == 'Kazu':
                 plt.savefig(output_folder + 'Pk_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight')
                 plt.close()
 
-                wefew
+                # wefew
 
                 
     

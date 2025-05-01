@@ -1,0 +1,44 @@
+comm <mpi4py.MPI.Intracomm object at 0x7fe05798ed10> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7f58dd630d70> comm.rank 0 comm.size 1
+Zic=39
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375  996.09375  498.046875]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375  996.09375  498.046875]
+Creating catalog
+Done
+Done delta_G2
+Readout
+Done delta_3
+Done
+Done delta_1
+Done delta_G2
+Done delta_3

@@ -1,0 +1,25 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+[ 000001.85 ]   0: 05-01 11:37  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000001.85 ]   0: 05-01 11:37  MeshSource      INFO     reading real field from /global/cfs/projectdirs/m4031/divijsharma/PNG/1991/Gaussian/ICmesh
+[ 000257.20 ]   0: 05-01 11:41  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000257.20 ]   0: 05-01 11:41  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000257.76 ]   0: 05-01 11:41  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000258.31 ]   0: 05-01 11:41  MeshSource      INFO     field: ArrayMesh() painting done
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 344, in <module>
+    print(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0), flush=True)
+NameError: name 'nslice' is not defined
+srun: error: nid004946: task 1: Exited with exit code 1
+srun: Terminating StepId=38261444.0
+[ 000258.93 ]   0: 05-01 11:41  MeshSource      INFO     BigFileMesh(file=ICmesh) resampling from [1536 1536 1536] to [256 256 256] done
+[ 000258.93 ]   0: 05-01 11:41  MeshSource      INFO     field: BigFileMesh(file=ICmesh) painting done
+[ 000259.52 ]   0: 05-01 11:41  MeshSource      INFO     field: ArrayMesh() painting done
+[ 000260.08 ]   0: 05-01 11:41  MeshSource      INFO     field: ArrayMesh() painting done
+Traceback (most recent call last):
+  File "Quijote_full_script.py", line 344, in <module>
+    print(ArrayMesh(dlin, BoxSize).paint()[:int(nslice*Nmesh/256),:,:].mean(axis=0), flush=True)
+NameError: name 'nslice' is not defined
+srun: error: nid004946: task 0: Exited with exit code 1

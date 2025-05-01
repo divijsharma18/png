@@ -1,0 +1,14 @@
+
+The following have been reloaded with a version change:
+  1) cudatoolkit/12.4 => cudatoolkit/12.0
+
+  File "Quijote_full_script.py", line 364
+    plt.savefig(output_folder + 'projection_IC_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight'))
+                                                                                                                                                                           ^
+SyntaxError: unmatched ')'
+  File "Quijote_full_script.py", line 364
+    plt.savefig(output_folder + 'projection_IC_z=%.1f_yz_Nmesh_%i_sim_%i_simType_%s_Mmin_%.1f_Mmax_%.1f.pdf'%(zout, Nmesh, sim, sim_type, Mmin, Mmax), bbox_inches='tight'))
+                                                                                                                                                                           ^
+SyntaxError: unmatched ')'
+srun: error: nid006044: tasks 0-1: Exited with exit code 1
+srun: Terminating StepId=38261189.0

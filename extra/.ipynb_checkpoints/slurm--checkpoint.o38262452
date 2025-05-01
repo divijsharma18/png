@@ -1,0 +1,4 @@
+comm <mpi4py.MPI.Intracomm object at 0x7fd4e91e7d50> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7f3b0de65cf0> comm.rank 0 comm.size 1
+Zic=39
