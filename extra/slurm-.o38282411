@@ -1,0 +1,222 @@
+comm <mpi4py.MPI.Intracomm object at 0x7f28ee341d70> comm.rank 0 comm.size 1
+Zic=39
+comm <mpi4py.MPI.Intracomm object at 0x7f3452b63c90> comm.rank 0 comm.size 1
+Zic=39
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+Generating shifted fields in real-space at output redshift z=0.5, in a BoxSize L=1000.0 on a Nmesh=256^3 grid with IC seed 5...
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 2 sec.)
+Done
+Creating particle mesh
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Readout
+Done
+Done
+Done delta_1
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 277 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 285 sec.)
+(11968368, 3)
+done (elapsed time: 277 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 285 sec.)
+(11968368, 3)
+Min position (x, y, z): [1.6e-04 1.5e-04 4.0e-05]
+Min position (x, y, z): [1.6e-04 1.5e-04 4.0e-05]
+Max position (x, y, z): [999.99988 999.99988 999.99994]
+Max position (x, y, z): [999.99988 999.99988 999.99994]
+cat.mean 5.6461431086063385e-08
+Nh = 66517.00, 1/nbar = 15033.75
+Loading initial density field... 
+Loading BigFileMesh
+cat.mean 5.6461431086063385e-08
+Nh = 66517.00, 1/nbar = 15033.75
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 432 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 432 sec.)
+Done
+Creating particle mesh
+Done
+Done
+Computing shifted fields... 
+Creating copy
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Readout
+Done
+Done
+Done delta_1
+Done delta_1
+Done delta_G2
+Done delta_G2
+Done delta_3
+Done delta_3
+done (elapsed time: 706 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 714 sec.)
+(11976223, 3)
+done (elapsed time: 706 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 714 sec.)
+(11976223, 3)
+Min position (x, y, z): [4.0e-05 2.5e-04 1.5e-04]
+Min position (x, y, z): [4.0e-05 2.5e-04 1.5e-04]
+Max position (x, y, z): [999.99994 999.99994 999.99988]
+Max position (x, y, z): [999.99994 999.99994 999.99988]
+cat.mean 6.28642737865448e-09
+Nh = 66525.00, 1/nbar = 15031.94
+Loading initial density field... 
+Loading BigFileMesh
+cat.mean 6.28642737865448e-09
+Nh = 66525.00, 1/nbar = 15031.94
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 852 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 852 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_3
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_3
+done (elapsed time: 1125 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1133 sec.)
+(11789719, 3)
+Min position (x, y, z): [0.00019 0.00031 0.00011]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -2.444721758365631e-08
+Nh = 69485.00, 1/nbar = 14391.60
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 1274 sec.)
+Done
+Creating particle mesh
+done (elapsed time: 1245 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1253 sec.)
+(11789719, 3)
+Min position (x, y, z): [0.00019 0.00031 0.00011]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -2.444721758365631e-08
+Nh = 69485.00, 1/nbar = 14391.60
+Loading initial density field... 
+Loading BigFileMesh
+done (elapsed time: 1396 sec.)
+Done
+Creating particle mesh
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_3
+Done
+Computing shifted fields... 
+Creating copy
+Done
+[256 256 256]
+Min position (x, y, z) for the uniform particle catalog: [0. 0. 0.]
+Max position (x, y, z)for the uniform particle catalog: [996.09375 996.09375 996.09375]
+Creating catalog
+Done
+Readout
+Done
+Done delta_1
+Done delta_G2
+Done delta_3
+done (elapsed time: 1553 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1561 sec.)
+(11793439, 3)
+Min position (x, y, z): [7.0e-05 1.2e-04 9.0e-05]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -1.5832483768463135e-08
+Nh = 69531.00, 1/nbar = 14382.07
+done (elapsed time: 1647 sec.)
+Orthogonalizing shifted fields... 
+done (elapsed time: 1655 sec.)
+(11793439, 3)
+Min position (x, y, z): [7.0e-05 1.2e-04 9.0e-05]
+Max position (x, y, z): [999.99994 999.99994 999.99994]
+cat.mean -1.5832483768463135e-08
+Nh = 69531.00, 1/nbar = 14382.07
